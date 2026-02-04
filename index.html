@@ -1,0 +1,130 @@
+<!doctype html>
+<html data-theme="dark" lang="en">
+  <head>
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css" >
+    <style>
+     body > main {
+         max-width: 90%;
+     }
+     .hero {
+       width: 100%;
+       height: 20em;
+       position: relative;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+     }
+
+     .hero::before {
+       content: '';
+       position: absolute;
+       inset: 0;
+       background: url('hero.jpg') center/cover;
+       filter: brightness(50%);
+       z-index: 0;
+     }
+
+     .hero-text {
+       position: relative;
+       z-index: 1;
+       color: white;
+       text-align: center;
+         /* font-size: 3rem; */
+       font-family: Arial, sans-serif;
+       text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+     }
+
+     article > header {
+         /* font-size: 2em; */
+     }
+
+    </style>
+
+  </head>
+  <body>
+    <main>
+        <header>
+            <section class="hero">
+                <h1 class="hero-text">Tell Champaign to Stop Sharing Data with ICE!</h1>
+            </section>
+        </header>
+
+      <article>
+        <ul>
+          <li>
+              Champaign Police Department uses cameras supplied by Flock, a company known to collaborate with ICE and CBP for immigration enforcement <a href="https://www.404media.co/ice-taps-into-nationwide-ai-enabled-camera-network-data-shows/">[source]</a>.
+          </li>
+          <li>
+              Flock uses AI to identify people and vehicles, which is prone to mistaken identity <a href="https://coloradosun.com/2025/10/28/flock-camera-police-colorado-columbine-valley/">[example]</a>, <a href="https://www.kgw.com/article/news/local/washington/license-plate-camera-error-police-arrest-washington-father-instead/281-6fa1842c-ca72-4150-a8ff-b076e456fbff">[example]</a>.
+          </li>
+          <li>
+              Flock data is nationally searchable without a warrant <a href="https://cardinalnews.org/2025/03/28/i-drove-300-miles-in-rural-virginia-then-asked-police-to-send-me-their-public-surveillance-footage-of-my-car-heres-what-i-learned/">[source]</a>.
+          </li>
+          <li>
+              Flock helped Texas police track a woman who came to Illinois to seek reproductive healthcare <a href="https://www.the-independent.com/news/world/americas/crime/texas-abortion-license-plate-camera-b2760411.html">[source]</a>.
+          </li>
+        </ul>
+      </article>
+
+
+      <article>
+        <header><h3>Frequently Asked Questions</h3></header>
+        <details>
+            <summary role="button">What are some examples of Flock abuse?</summary>
+            <p>
+                <ul>
+                    <li>
+                        A Kansas police chief used Flock to track his ex-girlfriend. He did not face any charges.
+                        [<a href="https://www.kansas.com/news/politics-government/article291059560.html">source</a>]
+                    </li>
+                    <li>
+                        Georgia police chief charged with using license plate readers to stalk and harass people.
+                        [<a href="https://apnews.com/article/georgia-plate-readers-stalk-harass-chief-arrested-39adb6f89fc2074da61f2801fef3f180">source</a>]
+                    </li>
+                </ul>
+            </p>
+        </details>
+        <details>
+            <summary role="button">But Flock said they stopped sharing data with ICE.</summary>
+            <p>
+                They said they don't in July 2025 [<a href="https://archive.is/rxqsT">source</a>],
+                but open records request showed that as of August 2025, ICE and CBP have indirect access even in some states where collaboration between police and ICE is illegal
+                [<a href="https://jsis.washington.edu/humanrights/2025/10/21/leaving-the-door-wide-open/">source</a>].
+            </p>
+            <p>
+                The main problem is that there is no transparency on the data once it gets uploaded to Flock's private servers.
+                They've lied before. Why should we trust them now?
+            </p>
+        </details>
+      </article>
+
+
+      <article>
+        <header><h3>Know what to look for!</h3></header>
+        <div style="display: flex; flex-wrap: wrap; gap: 1rem">
+        <article style="flex: 1; min-width: 400px">
+          <img src="flockpole.png"/>
+          Flock cameras are mounted on poles near intersections and look like this.
+        </article>
+        <article style="flex: 1; min-width: 400px">
+          <iframe
+            src="https://deflock.me/map?fullscreen=true#map=12/40.1055885/-88.2226301"
+            title="Interactive map of Flock camera locations in Urbana-Champaign"
+            aria-label="Map showing locations of Flock surveillance cameras in Urbana-Champaign"
+            allowfullscreen=""
+            loading="lazy"
+            style="width: 100%; height: 100%; min-height: 500px; border: none"
+          >
+          </iframe>
+          Map of Flock cameras in the Champaign-Urbana area.
+        </article>
+        </div>
+      </article>
+
+    </main>
+
+    <footer></footer>
+
+  </body>
+</html>
