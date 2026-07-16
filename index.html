@@ -1,19 +1,19 @@
 <!doctype html>
 <html data-theme="dark" lang="en">
 <head>
-  <title>Get rid of AI surveillance cams in Chambana</title>
-  <meta name="title" content="Get rid of AI surveillance cams in Chambana" />
+  <title>StopFlock | Get rid of AI surveillance cams in Chambana</title>
+  <meta name="title" content="StopFlock | Get rid of AI surveillance cams in Chambana" />
   <meta name="description" content="Champaign County, City of Champaign, UIUC, and Parkland Community College: remove your AI surveillance cameras NOW!" />
   
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://stopflock.org/" />
-  <meta property="og:title" content="Get rid of AI surveillance cams in Chambana" />
+  <meta property="og:title" content="StopFlock | Get rid of AI surveillance cams in Chambana" />
   <meta property="og:description" content="Champaign County, City of Champaign, UIUC, and Parkland Community College: remove your AI surveillance cameras NOW!" />
   <meta property="og:image" content="https://stopflock.org/flockpole.png" />
   
   <meta property="twitter:card" content="summary_large_image" />
   <meta property="twitter:url" content="https://stopflock.org/" />
-  <meta property="twitter:title" content="Get rid of AI surveillance cams in Chambana" />
+  <meta property="twitter:title" content="StopFlock | Get rid of AI surveillance cams in Chambana" />
   <meta property="twitter:description" content="Champaign County, City of Champaign, UIUC, and Parkland Community College: remove your AI surveillance cameras NOW!" />
   <meta property="twitter:image" content="https://stopflock.org/flockpole.png" />
   <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"> -->
@@ -27,13 +27,52 @@
       line-height: 1.6;
       font-family: sans-serif;
     }
-    .hero {
+
+    :root {
+      --card-bg: #262626;
+    }
+
+    .hero-image {
       width: 100%;
       height: 20em;
       position: relative;
       display: flex;
       align-items: center;
       justify-content: center;
+    }
+
+    .hero-image::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url('hero.jpg') center/cover;
+      filter: brightness(50%);
+      z-index: 0;
+    }
+
+    .hero {
+      width: 100%;
+      height: 20em;
+      position: relative;
+      display: flex;
+      flex-direction: column; 
+      align-items: center;
+      justify-content: center;
+      padding-bottom: 60px;     
+    }
+
+    .hero-title {
+      position: relative;
+      z-index: 1;
+      color: white;
+      font-size: 4rem;
+      font-weight: 800;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    }
+
+    .hero-content {
+      text-align: center;
+      padding-top: 20px; 
     }
     
     .hero::before {
@@ -50,9 +89,20 @@
       z-index: 1;
       color: white;
       text-align: center;
-      /* font-size: 3rem; */
       font-family: Arial, sans-serif;
       text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+
+    .body-header {
+      position: relative;
+      z-index: 1;
+      color: white;
+      text-align: center;
+      font-family: Arial, sans-serif;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+      margin-top: 30px;
     }
     
     article {
@@ -74,63 +124,201 @@
     li {
       margin-left: 20px !important;
     }
+
+    .signup-link {
+      text-align: center;
+    }
+
+    /* STATS STUFF */
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 40px; 
+      position: relative;
+      z-index: 10;
+    }
+
+    .stat-number {
+      font-size: 2.5rem;
+      font-weight: 800;
+      color: rgb(36, 178, 255);
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .stat-label {
+      font-size: 1rem;
+      color: #ccc;
+    }
+
+    .stat-card {
+      background: var(--card-bg);
+      padding: 40px;
+      border-radius: 1rem;
+      text-align: center;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+      border: 1px solid #333;
+      margin-bottom: 30px;
+    }
+
+    /* PROBLEM STUFF */
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+      gap: 50px;
+      margin: 40px 0;
+    }
+
+    .swap-card {
+      position: relative;
+      height: 360px;
+      background: var(--card-bg);
+      border: 1px solid #333;
+      border-radius: 1rem;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+    }
+
+    .card-face {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .card-title {
+      font-size: 1.4rem;
+      font-weight: 800;
+      color: white;
+    }
+
+    .card-text {
+      position: absolute;
+      inset: 0;
+      color: #ccc;
+      font-size: 0.9rem;
+      opacity: 0;
+      padding: 20px;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;   
+      justify-content: center;  
+      align-items: flex-start;  
+      text-align: left;
+      scrollbar-gutter: stable;
+    }
+
+    .card-text ul {
+      margin: 0 0 10px 0;
+      padding-left: 20px;
+      padding-right:20px;
+      font-size: 1.1rem;
+    }
+
+    .card-text ul:last-child {
+      margin-bottom: 0;
+    }
+
+    .swap-card:hover .card-title {
+      opacity: 0;
+    }
+
+    .swap-card:hover .card-text {
+      opacity: 1;
+    }
+
+    
     
   </style>
 </head>
 <body>
   <main>
     <header>
-      <section class="hero">
-        <h1 class="hero-text">Champaign County, City of Champaign, UIUC, and Parkland Community College: remove your AI surveillance cameras NOW!</h1>
-      </section>
+      <div class="hero-image">
+        <h2 class="hero-title">StopFlock</h2>
+      </div>
+
+      <div class="hero-content">
+        <h1 class="hero-text">Get AI Surveillance OUT of Champaign!</h1>
+
+        <div class="stats-grid">
+          <div class="stat-card">
+            <span class="stat-number">$200K+</span>
+            <span class="stat-label">Annual Tax Dollars</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number">x%</span>
+            <span class="stat-label">Reduction in Violence</span>
+          </div>
+        </div>
+
+        <h1 class="body-header">Why?</h1>
+        <p>Champaign County, City of Champaign, UIUC, and Parkland Community College partner with a company called <b>Flock</b> to provide ineffective, expensive AI survellance cameras. The AI makes mistakes leading to wrongful arrests all the time, and the data, stored on non-governmental servers, is searchable without a warrant.</p>
+      </div>
     </header>
-    <article>
-      <p>These institutions partner with a company called <b>Flock</b> to provide ineffective, expensive AI survellance cameras. The AI makes mistakes leading to wrongful arrests all the time, and the data, stored on non-governmental servers, is searchable without a warrant.</p>
-      <ul>
-        <li>
-          <strong>Flock surveillance cameras is ineffective at reducing gun violence</strong>          
+
+
+    <div class="card-grid">
+      <div class="swap-card">
+        <div class="card-face card-title">Ineffective</div>
+        <div class="card-face card-text">
           <ul>
-            Independent research shows Flock surveillance cameras in Champaign are rarely used for that purpose [<a href="https://www.youtube.com/watch?v=G6R3iJI_Q1E">source</a>] [<a href="https://communitydata.illinois.edu/wp-content/uploads/2024/02/ALPR-Surveillance-Policing-Champaign-Urbana.pdf">source</a>]
+            Independent research shows Flock surveillance cameras in Champaign are rarely used for that purpose. [<a href="https://www.youtube.com/watch?v=G6R3iJI_Q1E">source</a>] [<a href="https://communitydata.illinois.edu/wp-content/uploads/2024/02/ALPR-Surveillance-Policing-Champaign-Urbana.pdf">source</a>]
           </ul>
           <ul>
             Urbana—which refused to deploy Flock surveillance cameras—saw a larger drop in gun violence than Champaign after their purchase of Flock survellance cameras. [<a href="https://cu-citizenaccess.org/2023/09/champaign-and-urbana-shootings-fall-since-2021-peak-cities-pondering-what-preventive-programs-worked/">source</a>]
           </ul>
-        </li>
-        <li>
-          <strong>Flock is expensive</strong>
-        <ul>
-          The City fo Champaign pays more than $1.15 million, or more than $228,000 annually [<a href="https://documents.ci.champaign.il.us/object?id=19AMXUqJK8NDDIkV9TBwkZaGn-78YXqsI">source</a>]
-        </ul>
-        </li>
-        <li>
-          <strong>Flock data has been shared illegally with federal agencies</strong>
-        <ul>
-          Flock has been caught violating the Trust Act in multiple Illinois cities [<a href="https://www.404media.co/ice-taps-into-nationwide-ai-enabled-camera-network-data-shows/">source</a>] [<a href="https://www.mountprospect.org/Home/Components/News/News/10311/1042">source</a>] [<a href="https://news.wttw.com/2025/08/26/license-plate-camera-company-operating-illinois-halts-cooperation-federal-agencies-amid">source</a>]
-        </ul>
-        </li>
-        <li>
-          <strong>Flock relies on Artificial Intelligence</strong>
-        <ul>
-          AI is imperfect and prone to mistaken identity [<a href="https://coloradosun.com/2025/10/28/flock-camera-police-colorado-columbine-valley/">source</a>] [<a href="https://www.kgw.com/article/news/local/washington/license-plate-camera-error-police-arrest-washington-father-instead/281-6fa1842c-ca72-4150-a8ff-b076e456fbff">source</a>]
-        </ul>
-        </li>
-        <li>
-          <strong>Flock is prone to abuse</strong>
-        <ul>
-          Flock data is nationally searchable without a warrant. Police in Texas have used it to track a woman seeking an abortion, and it has been abused many times for stalking and harassment [<a href="https://cardinalnews.org/2025/03/28/i-drove-300-miles-in-rural-virginia-then-asked-police-to-send-me-their-public-surveillance-footage-of-my-car-heres-what-i-learned/">source</a>] [<a href="https://www.the-independent.com/news/world/americas/crime/texas-abortion-license-plate-camera-b2760411.html">source</a>] [<a href="https://www.aclu-wi.org/news/what-the-flock-police-surveillance-is-ripe-for-abuse/">source</a>] [<a href="https://www.kwch.com/2022/11/04/kechi-police-lieutenants-arrest-puts-flock-technology-under-scrutiny/">source</a>]
-        </ul>
-        </li>
-      </ul>
-    </article>
+        </div>
+      </div>
+      <div class="swap-card">
+        <div class="card-face card-title">Expensive</div>
+        <div class="card-face card-text">
+          <ul>
+            The City of Champaign pays more than $1.15 million, or more than $228,000 annually. [<a href="https://documents.ci.champaign.il.us/object?id=19AMXUqJK8NDDIkV9TBwkZaGn-78YXqsI">source</a>]
+          </ul>
+        </div>
+      </div>
+      <div class="swap-card">
+        <div class="card-face card-title">Federal Sharing</div>
+        <div class="card-face card-text">
+          <ul>
+            Flock has been caught violating the Trust Act in multiple Illinois cities. [<a href="https://www.404media.co/ice-taps-into-nationwide-ai-enabled-camera-network-data-shows/">source</a>] [<a href="https://www.mountprospect.org/Home/Components/News/News/10311/1042">source</a>] [<a href="https://news.wttw.com/2025/08/26/license-plate-camera-company-operating-illinois-halts-cooperation-federal-agencies-amid">source</a>]
+          </ul>
+        </div>
+      </div>
+      <div class="swap-card">
+        <div class="card-face card-title">AI Reliance</div>
+        <div class="card-face card-text">
+          <ul>
+            AI is imperfect and prone to mistaken identity. [<a href="https://coloradosun.com/2025/10/28/flock-camera-police-colorado-columbine-valley/">source</a>] [<a href="https://www.kgw.com/article/news/local/washington/license-plate-camera-error-police-arrest-washington-father-instead/281-6fa1842c-ca72-4150-a8ff-b076e456fbff">source</a>]
+          </ul>
+        </div>
+      </div>
+      <div class="swap-card">
+        <div class="card-face card-title">Abuse-Prone</div>
+        <div class="card-face card-text">
+          <ul>
+            Flock data is nationally searchable without a warrant. Police in Texas have used it to track a woman seeking an abortion, and it has been abused many times for stalking and harassment. [<a href="https://cardinalnews.org/2025/03/28/i-drove-300-miles-in-rural-virginia-then-asked-police-to-send-me-their-public-surveillance-footage-of-my-car-heres-what-i-learned/">source</a>] [<a href="https://www.the-independent.com/news/world/americas/crime/texas-abortion-license-plate-camera-b2760411.html">source</a>] [<a href="https://www.aclu-wi.org/news/what-the-flock-police-surveillance-is-ripe-for-abuse/">source</a>] [<a href="https://www.kwch.com/2022/11/04/kechi-police-lieutenants-arrest-puts-flock-technology-under-scrutiny/">source</a>]
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+    
     
     <article>
-      <header><h3>How can I get involved?</h3></header>
+      <header><h3 class="body-header">How can I get involved?</h3></header>
       <details>
         <summary role="button">Sign the Petition</summary>
         <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSevAvVQi3d1cavRZ9tuiJdRvOsFQHIEStp29bJhePYS1p88jA/viewform?embedded=true" width="640" height="1359" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
       </details>
       <details>
-        <summary role="button">Email your Champaign City Councilperson and share your concerns</summary>
+        <summary role="button">Email your Champaign City Councilperson</summary>
         <p><strong><a href="https://cityofchampaign.maps.arcgis.com/apps/instant/lookup/index.html?appid=212fd7f5b2ee4792a2dff1df6689128f">Use this interactive map to find your Champaign City Council district.</a></strong></p>
         <ul>
           <li>Will Kyles (At Large)</li>
@@ -157,13 +345,36 @@
         <p><strong><a href="https://cityofchampaign.sharepoint.com/sites/CityofChampaignMeetingDocuments/City%20Council%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FCityofChampaignMeetingDocuments%2FCity%20Council%20Documents%2FCity%20Council%20Documents&p=true&ga=1">You can view upcoming agendas and past meeting minutes here.</a></strong></p>
       </details>
       <details>
-        <summary role="button">Read or subscribe to our newsletter</summary>
-        <p><strong><a href="https://deflockchampaign.substack.com">Sign Up Here</a></strong></p>
+        <summary role="button">Subscribe to our newsletter</summary>
+        <p><strong><a href="#newsletter">Sign Up Here</a></strong></p>
       </details>	
     </article>	
-    
+      
+      
+      <article>
+        <header><h3 class="body-header">Know what to look for!</h3></header>
+        <div style="display: flex; flex-wrap: wrap; gap: 1rem">
+          <article style="flex: 1; min-width: 400px">
+            <img src="flockpole.png"/>
+            Flock cameras are mounted on poles near intersections and look like this.
+          </article>
+          <article style="flex: 1; min-width: 400px">
+            <iframe
+            src="https://deflock.me/map?fullscreen=true#map=12/40.1055885/-88.2226301"
+            title="Interactive map of Flock camera locations in Urbana-Champaign"
+            aria-label="Map showing locations of Flock surveillance cameras in Urbana-Champaign"
+            allowfullscreen=""
+            loading="lazy"
+            style="width: 100%; height: 100%; min-height: 500px; border: none"
+            >
+          </iframe>
+          Map of Flock cameras in the Champaign-Urbana area.
+        </article>
+      </div>
+    </article>
+
     <article>
-      <header><h3>Frequently Asked Questions</h3></header>
+      <header><h3 class="body-header">FAQ</h3></header>
       <details>
         <summary role="button">What is Flock Group Inc.?</summary>
         <p>Flock Group Inc. is a private company that provides Automated License Plate Readers (ALPRs) and other surveillance equipment to law enforcement and private entities. ALPRs are cameras that continuously capture, process, and interpret the license plates, vehicle images, and locations of every car that drives past them.</p>
@@ -229,30 +440,13 @@
           </ul>
         </details>
       </article>
-      
-      
-      <article>
-        <header><h3>Know what to look for!</h3></header>
-        <div style="display: flex; flex-wrap: wrap; gap: 1rem">
-          <article style="flex: 1; min-width: 400px">
-            <img src="flockpole.png"/>
-            Flock cameras are mounted on poles near intersections and look like this.
-          </article>
-          <article style="flex: 1; min-width: 400px">
-            <iframe
-            src="https://deflock.me/map?fullscreen=true#map=12/40.1055885/-88.2226301"
-            title="Interactive map of Flock camera locations in Urbana-Champaign"
-            aria-label="Map showing locations of Flock surveillance cameras in Urbana-Champaign"
-            allowfullscreen=""
-            loading="lazy"
-            style="width: 100%; height: 100%; min-height: 500px; border: none"
-            >
-          </iframe>
-          Map of Flock cameras in the Champaign-Urbana area.
-        </article>
-      </div>
-    </article>
     
+      <article>
+
+        <header><h3 class="body-header" id="newsletter">Newsletter</h3></header>
+        <h3 class="body-header"><a href="https://deflockchampaign.substack.com">Sign Up Here</a></p>
+
+      </article>
     
   </main>
   
