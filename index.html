@@ -167,14 +167,14 @@
 
     .card-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
-      gap: 50px;
+      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+      gap: 30px;
       margin: 40px 0;
     }
 
     .swap-card {
       position: relative;
-      height: 360px;
+      height: 260px;
       background: var(--card-bg);
       border: 1px solid #333;
       border-radius: 1rem;
@@ -187,12 +187,12 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 20px;
+      padding: 15px;
       text-align: center;
     }
 
     .card-title {
-      font-size: 1.4rem;
+      font-size: 1.1rem;
       font-weight: 800;
       color: white;
     }
@@ -201,9 +201,9 @@
       position: absolute;
       inset: 0;
       color: #ccc;
-      font-size: 0.9rem;
+      font-size: 0.8rem;
       opacity: 0;
-      padding: 20px;
+      padding: 15px;
       overflow-y: auto;
       display: flex;
       flex-direction: column;   
@@ -214,10 +214,10 @@
     }
 
     .card-text ul {
-      margin: 0 0 10px 0;
-      padding-left: 20px;
-      padding-right:20px;
-      font-size: 1.1rem;
+      margin: 0 0 8px 0;
+      padding-left: 18px;
+      padding-right: 15px;
+      font-size: 0.8rem;
     }
 
     .card-text ul:last-child {
@@ -237,6 +237,13 @@
   </style>
 </head>
 <body>
+
+  <!--
+  <nav style="display: flex; justify-content: center; gap: 2rem; padding: 20px; background: var(--card-bg); border-bottom: 1px solid #333;">
+    <a href="map.html" style="color: white; text-decoration: none; font-family: Arial, sans-serif;">Map</a>
+    <a href="foia.html" style="color: white; text-decoration: none; font-family: Arial, sans-serif;">Forms</a>
+  </nav>-->
+
   <main>
     <header>
       <div class="hero-image">
