@@ -68,6 +68,7 @@
       font-size: 4rem;
       font-weight: 800;
       text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+      font-family: Arial, sans-serif;
     }
 
     .hero-content {
@@ -232,17 +233,62 @@
       opacity: 1;
     }
 
+    /* NAV BAR STUFF */
+
+    nav a {
+      color: rgb(36, 178, 255);
+      text-decoration: none;
+      font-family: Arial, sans-serif;
+    }
+
+    .dropdown { position: relative; }
+
+    .dropdown-menu {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: var(--card-bg);
+      border: 1px solid #333;
+      border-radius: 6px;
+      padding: 8px 0;
+      min-width: 160px;
+      z-index: 10;
+    }
+
+    .dropdown:hover .dropdown-menu { display: block; }
+
+    .dropdown-menu a {
+      display: block;
+      padding: 8px 16px;
+      color: white;
+      font-size: 0.8rem;
+    }
+
     
     
   </style>
 </head>
 <body>
 
-  <!--
+  
   <nav style="display: flex; justify-content: center; gap: 2rem; padding: 20px; background: var(--card-bg); border-bottom: 1px solid #333;">
-    <a href="map.html" style="color: white; text-decoration: none; font-family: Arial, sans-serif;">Map</a>
-    <a href="foia.html" style="color: white; text-decoration: none; font-family: Arial, sans-serif;">Forms</a>
-  </nav>-->
+    <a href="index.html">Home</a>
+    
+    <div class="dropdown">
+      <a href="foia.html">FOIAs</a>
+      <div class="dropdown-menu">
+        <a href="foia.html#ccso">Champaign County Sheriff</a>
+        <a href="foia.html#cpd">Champaign Police Department</a>
+        <a href="foia.html#parkland">Parkland College</a>
+        <a href="foia.html#uiuc">UIUC</a>
+        <a href="foia.html#misc">Misc</a>
+      </div>
+    </div>
+
+    <a href="index.html#map">Map</a>
+    <a href="index.html#newsletter">Newsletter</a>
+  </nav>
 
   <main>
     <header>
@@ -365,7 +411,7 @@
           <img src="flockpole.png" style="width: 100%; margin-bottom: 2rem"/>
           Flock cameras are mounted on poles near intersections and look like this.
         </article>
-        <article>
+        <article  id="map">
           <iframe
             src="https://deflock.me/map?fullscreen=true#map=12/40.1055885/-88.2226301"
             title="Interactive map of Flock camera locations in Urbana-Champaign"

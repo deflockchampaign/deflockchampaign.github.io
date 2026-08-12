@@ -68,6 +68,7 @@
       font-size: 4rem;
       font-weight: 800;
       text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+      font-family: Arial, sans-serif;
     }
 
     .hero-content {
@@ -247,11 +248,85 @@
     .doc-index a { color: white; text-decoration: none; }
     .doc-index a:hover { color: rgb(36, 178, 255); }
 
+    .doc-index ul ul li {
+      display: flex;
+      justify-content: space-between;
+    }    
+    .doc-index span { color: #888; font-size: 0.6rem; white-space: nowrap; margin-left: 10px; }
+    .doc-index ul ul li { display: flex; align-items: center; }
+    .doc-index ul ul li .leader {
+      flex: 1;
+      border-bottom: 2px dotted #555;
+      margin: 0 8px;
+    }
+
+
+
+
+    /* FOIA NAV BAR STUFF */
+
+    nav a {
+      color: rgb(36, 178, 255);
+      text-decoration: none;
+      font-family: Arial, sans-serif;
+    }
+
+    .dropdown { position: relative; }
+
+    .dropdown-menu {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: var(--card-bg);
+      border: 1px solid #333;
+      border-radius: 6px;
+      padding: 8px 0;
+      min-width: 160px;
+      z-index: 10;
+    }
+
+    .dropdown:hover .dropdown-menu { display: block; }
+
+    .dropdown-menu a {
+      display: block;
+      padding: 8px 16px;
+      color: white;
+      font-size: 0.8rem;
+    }
+
+    /* FOR BLOCK OF NOTES UNDER CPD */
+
+    .doc-index .notes-list { list-style: disc; padding-left: 20px; margin-top: 10px; }
+    .doc-index .notes-list li { display: list-item; font-size: 0.6rem; }
+    .doc-index .notes-list ul { list-style: circle; padding-left: 20px; margin-top: 4px; }
+
     
     
   </style>
 </head>
 <body>
+
+  <nav style="display: flex; justify-content: center; gap: 2rem; padding: 20px; background: var(--card-bg); border-bottom: 1px solid #333;">
+    <a href="index.html">Home</a>
+    
+    <div class="dropdown">
+      <a href="foia.html">FOIAs</a>
+      <div class="dropdown-menu">
+        <a href="foia.html#ccso">Champaign County Sheriff</a>
+        <a href="foia.html#cpd">Champaign Police Department</a>
+        <a href="foia.html#parkland">Parkland College</a>
+        <a href="foia.html#uiuc">UIUC</a>
+        <a href="foia.html#misc">Misc</a>
+      </div>
+    </div>
+
+    <a href="index.html#map">Map</a>
+    <a href="index.html#newsletter">Newsletter</a>
+  </nav>
+
+
+
   <main>
     <header>
       <div class="hero-image">
@@ -263,141 +338,544 @@
         <p>Under the <b>Freedom of Information Act</b> (FOIA), citizens can request records from U.S. federal agencies. Below are an assortment of FOIA requests that have been recieved:</p>
       </div>
 
+      <nav style="display: flex; justify-content: center; gap: 1rem; padding: 15px; background: var(--card-bg); border-bottom: 1px solid #333; margin-bottom: 50px;">
+        <a href="#ccso" style="color: rgb(36, 178, 255); text-decoration: none; font-family: Arial, sans-serif;">Champaign County Sheriff</a> ·
+        <a href="#cpd" style="color: rgb(36, 178, 255); text-decoration: none; font-family: Arial, sans-serif;">Champaign Police Department</a> ·
+        <a href="#parkland" style="color: rgb(36, 178, 255); text-decoration: none; font-family: Arial, sans-serif;">Parkland College</a> ·
+        <a href="#uiuc" style="color: rgb(36, 178, 255); text-decoration: none; font-family: Arial, sans-serif;">UIUC</a> ·
+        <a href="#misc" style="color: rgb(36, 178, 255); text-decoration: none; font-family: Arial, sans-serif;">Misc</a>
+      </nav>
+      
+
 
       <div class="doc-index">
-        <h3>Champaign County Sheriff's Office</h3>
+        <h3 id="ccso">Champaign County Sheriff's Office</h3>
         <ul>
-          <li><a href="foias/champaign_county_sheriffs_office/1/2021-09-20_order_form_and_contract.pdf" target="_blank">2021-09-20_order_form_and_contract.pdf</a></li>
-          <li><a href="foias/champaign_county_sheriffs_office/1/2023-02-21_invoice.pdf" target="_blank">2023-02-21_invoice.pdf</a></li>
-          <li><a href="foias/champaign_county_sheriffs_office/1/2023-02-22_invoice.pdf" target="_blank">2023-02-22_invoice.pdf</a></li>
-          <li><a href="foias/champaign_county_sheriffs_office/1/2023-12-27_order_form_and_renewal.pdf" target="_blank">2023-12-27_order_form_and_renewal.pdf</a></li>
-          <li><a href="foias/champaign_county_sheriffs_office/1/2024-02-26_invoice.pdf" target="_blank">2024-02-26_invoice.pdf</a></li>
-          <li><a href="foias/champaign_county_sheriffs_office/1/2025-01-02_invoice.pdf" target="_blank">2025-01-02_invoice.pdf</a></li>
-          <li><a href="foias/champaign_county_sheriffs_office/1/2026-03-12_FOIA_correspondence.pdf" target="_blank">2026-03-12_FOIA_correspondence.pdf</a></li>
-          <li><a href="foias/champaign_county_sheriffs_office/1/2026-03-18_FOIA_correspondence.pdf" target="_blank">2026-03-18_FOIA_correspondence.pdf</a></li>
-          <li><a href="foias/champaign_county_sheriffs_office/1/2026-03-19_FOIA_correspondence.pdf" target="_blank">2026-03-19_FOIA_correspondence.pdf</a></li>
-          <li><a href="foias/champaign_county_sheriffs_office/1/2026-03-26_FOIA_correspondence.pdf" target="_blank">2026-03-26_FOIA_correspondence.pdf</a></li>
-          <li><a href="foias/champaign_county_sheriffs_office/1/2026-03-27_FOIA_correspondence.pdf" target="_blank">2026-03-27_FOIA_correspondence.pdf</a></li>
-          <li><a href="foias/champaign_county_sheriffs_office/1/2026-04-02_county_correspondence.pdf" target="_blank">2026-04-02_county_correspondence.pdf</a></li>
-          <li><a href="foias/champaign_county_sheriffs_office/1/2026-05-04_FOIA_no_agreements.pdf" target="_blank">2026-05-04_FOIA_no_agreements.pdf</a></li>
-          <li><a href="foias/champaign_county_sheriffs_office/1/2026-05-11_foia_correspondence.pdf" target="_blank">2026-05-11_foia_correspondence.pdf</a></li>
-          <li><a href="foias/champaign_county_sheriffs_office/1/2026-05-18_correspondence.pdf" target="_blank">2026-05-18_correspondence.pdf</a></li>
-          <li><a href="foias/champaign_county_sheriffs_office/1/2026-05-18_correspondence_2.pdf" target="_blank">2026-05-18_correspondence_2.pdf</a></li>
-          <li><a href="foias/champaign_county_sheriffs_office/1/2026-06-09_correspondence.pdf" target="_blank">2026-06-09_correspondence.pdf</a></li>
-          <li><a href="foias/champaign_county_sheriffs_office/1/2026-06-22_correspondence.pdf" target="_blank">2026-06-22_correspondence.pdf</a></li>
-          <li><a href="foias/champaign_county_sheriffs_office/1/2026-07-04_correspondence.pdf" target="_blank">2026-07-04_correspondence.pdf</a></li>
-          <li><a href="foias/champaign_county_sheriffs_office/1/2026-07-14_corresondence.pdf" target="_blank">2026-07-14_corresondence.pdf</a></li>
-          <li><a href="foias/champaign_county_sheriffs_office/1/2026-07-14_email.pdf" target="_blank">2026-07-14_email.pdf</a></li>
-          <li><a href="foias/champaign_county_sheriffs_office/1/email_to_ilsos.pdf" target="_blank">email_to_ilsos.pdf</a></li>
-          <li><a href="foias/champaign_county_sheriffs_office/1/foia_disclosed_emails.pdf" target="_blank">foia_disclosed_emails.pdf</a></li>
-          <li><a href="foias/champaign_county_sheriffs_office/1/muller_FOIA_correspondence.pdf" target="_blank">muller_FOIA_correspondence.pdf</a></li>
-          <li><a href="foias/champaign_county_sheriffs_office/1/policies.pdf" target="_blank">policies.pdf</a></li>
-        </ul>
-
-        <h3>Champaign Police Department</h3>
-        <ul>
-          <li><strong>Annual Reports</strong>
-            <ul>
-              <li><a href="foias/champaign_police_department/1/annual_reports/2022-07-22_annual_report.docx" target="_blank">2022-07-22_annual_report.docx</a></li>
-              <li><a href="foias/champaign_police_department/1/annual_reports/2023-07-20_annual_report.docx" target="_blank">2023-07-20_annual_report.docx</a></li>
-              <li><a href="foias/champaign_police_department/1/annual_reports/2023-07-20_annual_report.pdf" target="_blank">2023-07-20_annual_report.pdf</a></li>
-              <li><a href="foias/champaign_police_department/1/annual_reports/2024-12-31_annual_report.docx" target="_blank">2024-12-31_annual_report.docx</a></li>
-              <li><a href="foias/champaign_police_department/1/annual_reports/2025-10-13_annual_report.docx" target="_blank">2025-10-13_annual_report.docx</a></li>
-            </ul>
-          </li>
-
           <li><strong>Correspondence</strong>
             <ul>
-              <li><a href="foias/champaign_police_department/1/correspondence/2026-03-13_foia_correspondence.pdf" target="_blank">2026-03-13_foia_correspondence.pdf</a></li>
-              <li><a href="foias/champaign_police_department/1/correspondence/2026-03-22_foia_correspondence.pdf" target="_blank">2026-03-22_foia_correspondence.pdf</a></li>
-              <li><a href="foias/champaign_police_department/1/correspondence/2026-03-23_1_foia_correspondence.pdf" target="_blank">2026-03-23_1_foia_correspondence.pdf</a></li>
-              <li><a href="foias/champaign_police_department/1/correspondence/2026-03-23_2_foia_correspondence.pdf" target="_blank">2026-03-23_2_foia_correspondence.pdf</a></li>
-              <li><a href="foias/champaign_police_department/1/correspondence/2026-03-25_1_foia_correspondence.pdf" target="_blank">2026-03-25_1_foia_correspondence.pdf</a></li>
-              <li><a href="foias/champaign_police_department/1/correspondence/2026-03-25_2_foia_correspondence.pdf" target="_blank">2026-03-25_2_foia_correspondence.pdf</a></li>
-              <li><a href="foias/champaign_police_department/1/correspondence/2026-03-25_3_foia_correspondence.pdf" target="_blank">2026-03-25_3_foia_correspondence.pdf</a></li>
+              <li>
+                <a href="foias/champaign_county_sheriffs_office/1/2026-03-12_FOIA_correspondence.pdf" target="_blank">2026-03-12_FOIA_correspondence.pdf</a>
+                <span class="leader"></span>
+                <span>.</span>
+              </li>
+              <li>
+                <a href="foias/champaign_county_sheriffs_office/1/2026-03-18_FOIA_correspondence.pdf" target="_blank">2026-03-18_FOIA_correspondence.pdf</a>
+                <span class="leader"></span>
+                <span>.</span>
+              </li>
+              <li>
+                <a href="foias/champaign_county_sheriffs_office/1/2026-03-19_FOIA_correspondence.pdf" target="_blank">2026-03-19_FOIA_correspondence.pdf</a>
+                <span class="leader"></span>
+                <span>.</span>
+              </li>
+              <li>
+                <a href="foias/champaign_county_sheriffs_office/1/2026-03-26_FOIA_correspondence.pdf" target="_blank">2026-03-26_FOIA_correspondence.pdf</a>
+                <span class="leader"></span>
+                <span>.</span>
+              </li>
+              <li>
+                <a href="foias/champaign_county_sheriffs_office/1/2026-03-27_FOIA_correspondence.pdf" target="_blank">2026-03-27_FOIA_correspondence.pdf</a>
+                <span class="leader"></span>
+                <span>.</span>
+              </li>
+              <li>
+                <a href="foias/champaign_county_sheriffs_office/1/2026-04-02_county_correspondence.pdf" target="_blank">2026-04-02_county_correspondence.pdf</a>
+                <span class="leader"></span>
+                <span>.</span>
+              </li>
+              <li>
+                <a href="foias/champaign_county_sheriffs_office/1/2026-05-11_foia_correspondence.pdf" target="_blank">2026-05-11_foia_correspondence.pdf</a>
+                <span class="leader"></span>
+                <span>.</span>
+              </li>
+              <li>
+                <a href="foias/champaign_county_sheriffs_office/1/2026-05-18_correspondence.pdf" target="_blank">2026-05-18_correspondence.pdf</a>
+                <span class="leader"></span>
+                <span>.</span>
+              </li>
+              <li>
+                <a href="foias/champaign_county_sheriffs_office/1/2026-05-18_correspondence_2.pdf" target="_blank">2026-05-18_correspondence_2.pdf</a>
+                <span class="leader"></span>
+                <span>.</span>
+              </li>
+              <li>
+                <a href="foias/champaign_county_sheriffs_office/1/2026-06-09_correspondence.pdf" target="_blank">2026-06-09_correspondence.pdf</a>
+                <span class="leader"></span>
+                <span>.</span>
+              </li>
+              <li>
+                <a href="foias/champaign_county_sheriffs_office/1/2026-06-22_correspondence.pdf" target="_blank">2026-06-22_correspondence.pdf</a>
+                <span class="leader"></span>
+                <span>.</span>
+              </li>
+              <li>
+                <a href="foias/champaign_county_sheriffs_office/1/2026-07-04_correspondence.pdf" target="_blank">2026-07-04_correspondence.pdf</a>
+                <span class="leader"></span>
+                <span>.</span>
+              </li>
+              <li>
+                <a href="foias/champaign_county_sheriffs_office/1/2026-07-14_corresondence.pdf" target="_blank">2026-07-14_corresondence.pdf</a>
+                <span class="leader"></span>
+                <span>.</span>
+              </li>
             </ul>
           </li>
 
-          <li><strong>CRS Reports</strong>
+          <li><strong>Invoices</strong> <!-- UNSURE IF LABELS ARE ACCURATE-->
             <ul>
-              <li><a href="foias/champaign_police_department/1/crs_reports/2024-07_to_2024-12_crs_report.docx" target="_blank">2024-07_to_2024-12_crs_report.docx</a></li>
-              <li><a href="foias/champaign_police_department/1/crs_reports/2025-01_to_2025-06_crs_report.docx" target="_blank">2025-01_to_2025-06_crs_report.docx</a></li>
-              <li><a href="foias/champaign_police_department/1/crs_reports/2025-07_to_2025-12_crs_report.pdf" target="_blank">2025-07_to_2025-12_crs_report.pdf</a></li>
+              <li>
+                <a href="foias/champaign_county_sheriffs_office/1/2023-02-21_invoice.pdf" target="_blank">2023-02-21_invoice.pdf</a>
+                <span class="leader"></span>
+                <span>$2,850  1 Falcon</span>
+              </li>
+              <li>
+                <a href="foias/champaign_county_sheriffs_office/1/2023-02-22_invoice.pdf" target="_blank">2023-02-22_invoice.pdf</a>
+                <span class="leader"></span>
+                <span>$4,800  3 Falcons</span>
+              </li>
+              <li>
+                <a href="foias/champaign_county_sheriffs_office/1/2024-02-26_invoice.pdf" target="_blank">2024-02-26_invoice.pdf</a>
+                <span class="leader"></span>
+                <span>$21,753.42  11 Falcons</span>
+              </li>
+              <li>
+                <a href="foias/champaign_county_sheriffs_office/1/2025-01-02_invoice.pdf" target="_blank">2025-01-02_invoice.pdf</a>
+                <span class="leader"></span>
+                <span>$27,500 11 Falcons</span>
+              </li>
             </ul>
           </li>
 
-          <li><strong>Invoices</strong>
+          <li><strong>Other</strong>
             <ul>
-              <li><a href="foias/champaign_police_department/1/invoices/2022-10-05_invoice.pdf" target="_blank">2022-10-05_invoice.pdf</a></li>
-              <li><a href="foias/champaign_police_department/1/invoices/2023-07-20_invoice.pdf" target="_blank">2023-07-20_invoice.pdf</a></li>
-              <li><a href="foias/champaign_police_department/1/invoices/2023-08-24_invoice.pdf" target="_blank">2023-08-24_invoice.pdf</a></li>
-              <li><a href="foias/champaign_police_department/1/invoices/2024-02-24_invoice.pdf" target="_blank">2024-02-24_invoice.pdf</a></li>
-              <li><a href="foias/champaign_police_department/1/invoices/2024-08-05_invoice.pdf" target="_blank">2024-08-05_invoice.pdf</a></li>
-              <li><a href="foias/champaign_police_department/1/invoices/2024-10-10_invoice.pdf" target="_blank">2024-10-10_invoice.pdf</a></li>
-              <li><a href="foias/champaign_police_department/1/invoices/2024-10-30_invoice.pdf" target="_blank">2024-10-30_invoice.pdf</a></li>
-              <li><a href="foias/champaign_police_department/1/invoices/2025-01-28_invoice.pdf" target="_blank">2025-01-28_invoice.pdf</a></li>
-              <li><a href="foias/champaign_police_department/1/invoices/2025-04-11_invoice.pdf" target="_blank">2025-04-11_invoice.pdf</a></li>
-              <li><a href="foias/champaign_police_department/1/invoices/2025-10-27_invoice.pdf" target="_blank">2025-10-27_invoice.pdf</a></li>
-              <li><a href="foias/champaign_police_department/1/invoices/2026-01-26_invoice.pdf" target="_blank">2026-01-26_invoice.pdf</a></li>
+              <li>
+                <a href="foias/champaign_county_sheriffs_office/1/2021-09-20_order_form_and_contract.pdf" target="_blank">2021-09-20_order_form_and_contract.pdf</a>
+                <span class="leader"></span>
+                <span>.</span>
+              </li>
+              <li>
+                <a href="foias/champaign_county_sheriffs_office/1/2023-12-27_order_form_and_renewal.pdf" target="_blank">2023-12-27_order_form_and_renewal.pdf</a>
+                <span class="leader"></span>
+                <span>.</span>
+              </li>
+              <li>
+                <a href="foias/champaign_county_sheriffs_office/1/2026-05-04_FOIA_no_agreements.pdf" target="_blank">2026-05-04_FOIA_no_agreements.pdf</a>
+                <span class="leader"></span>
+                <span>.</span>
+              </li>
+              <li>
+                <a href="foias/champaign_county_sheriffs_office/1/2026-07-14_email.pdf" target="_blank">2026-07-14_email.pdf</a>
+                <span class="leader"></span>
+                <span>.</span>
+              </li>
+              <li>
+                <a href="foias/champaign_county_sheriffs_office/1/email_to_ilsos.pdf" target="_blank">email_to_ilsos.pdf</a>
+                <span class="leader"></span>
+                <span>.</span>
+              </li>
+              <li>
+                <a href="foias/champaign_county_sheriffs_office/1/foia_disclosed_emails.pdf" target="_blank">foia_disclosed_emails.pdf</a>
+                <span class="leader"></span>
+                <span>.</span>
+              </li>
+              <li>
+                <a href="foias/champaign_county_sheriffs_office/1/muller_FOIA_correspondence.pdf" target="_blank">muller_FOIA_correspondence.pdf</a>
+                <span class="leader"></span>
+                <span>.</span>
+              </li>
+              <li>
+                <a href="foias/champaign_county_sheriffs_office/1/policies.pdf" target="_blank">policies.pdf</a>
+                <span class="leader"></span>
+                <span>.</span>
+              </li>
             </ul>
           </li>
-
-          <li><strong>Org Audit</strong>
-            <ul>
-              <li><a href="foias/champaign_police_department/1/org_audit/Champaign IL PD_Organization_Audit_2025-01-01_2025-02-01.csv" target="_blank">Champaign IL PD_Organization_Audit_2025-01-01_2025-02-01.csv</a></li>
-              <li><a href="foias/champaign_police_department/1/org_audit/Champaign IL PD_Organization_Audit_2025-02-01_2025-03-01.csv" target="_blank">Champaign IL PD_Organization_Audit_2025-02-01_2025-03-01.csv</a></li>
-              <li><a href="foias/champaign_police_department/1/org_audit/Champaign IL PD_Organization_Audit_2025-03-01_2025-04-01.csv" target="_blank">Champaign IL PD_Organization_Audit_2025-03-01_2025-04-01.csv</a></li>
-              <li><a href="foias/champaign_police_department/1/org_audit/Champaign IL PD_Organization_Audit_2025-04-01_2025-05-01.csv" target="_blank">Champaign IL PD_Organization_Audit_2025-04-01_2025-05-01.csv</a></li>
-              <li><a href="foias/champaign_police_department/1/org_audit/Champaign IL PD_Organization_Audit_2025-05-01_2025-06-01.csv" target="_blank">Champaign IL PD_Organization_Audit_2025-05-01_2025-06-01.csv</a></li>
-              <li><a href="foias/champaign_police_department/1/org_audit/Champaign IL PD_Organization_Audit_2025-06-01_2025-07-01.xlsx" target="_blank">Champaign IL PD_Organization_Audit_2025-06-01_2025-07-01.xlsx</a></li>
-              <li><a href="foias/champaign_police_department/1/org_audit/Champaign IL PD_Organization_Audit_2025-07-01_2025-08-01.xlsx" target="_blank">Champaign IL PD_Organization_Audit_2025-07-01_2025-08-01.xlsx</a></li>
-              <li><a href="foias/champaign_police_department/1/org_audit/Champaign IL PD_Organization_Audit_2025-08-01_09-01.csv" target="_blank">Champaign IL PD_Organization_Audit_2025-08-01_09-01.csv</a></li>
-              <li><a href="foias/champaign_police_department/1/org_audit/Champaign IL PD_Organization_Audit_2025-08-01_2025-08-31.csv" target="_blank">Champaign IL PD_Organization_Audit_2025-08-01_2025-08-31.csv</a></li>
-              <li><a href="foias/champaign_police_department/1/org_audit/Champaign IL PD_Organization_Audit_2025-10-01_2025-10-31.csv.xlsx" target="_blank">Champaign IL PD_Organization_Audit_2025-10-01_2025-10-31.csv.xlsx</a></li>
-              <li><a href="foias/champaign_police_department/1/org_audit/Champaign IL PD_Organization_Audit_2025-11-01_2025-11-30.csv.xlsx" target="_blank">Champaign IL PD_Organization_Audit_2025-11-01_2025-11-30.csv.xlsx</a></li>
-              <li><a href="foias/champaign_police_department/1/org_audit/Champaign IL PD_Organization_Audit_2025-12-01_2025-12-31.csv.xlsx" target="_blank">Champaign IL PD_Organization_Audit_2025-12-01_2025-12-31.csv.xlsx</a></li>
-              <li><a href="foias/champaign_police_department/1/org_audit/Champaign IL PD_Organization_Audit_2026-01-01_2026-01-31.csv.xlsx" target="_blank">Champaign IL PD_Organization_Audit_2026-01-01_2026-01-31.csv.xlsx</a></li>
-              <li><a href="foias/champaign_police_department/1/org_audit/Champaign IL PD_Organization_Audit_2026-02-01_2025-02-28.csv" target="_blank">Champaign IL PD_Organization_Audit_2026-02-01_2025-02-28.csv</a></li>
-            </ul>
-          </li>
-
-
-          <li><a href="foias/champaign_police_department/1/2022-03-15_contract.pdf" target="_blank">2022-03-15_contract.pdf</a></li>
-          <li><a href="foias/champaign_police_department/1/2023-12-27_contract.pdf" target="_blank">2023-12-27_contract.pdf</a></li>
-          <li><a href="foias/champaign_police_department/1/2024-apr.csv" target="_blank">2024-apr.csv</a></li>
-          <li><a href="foias/champaign_police_department/1/2026_may_audit.pdf" target="_blank">2026_may_audit.pdf</a></li>
-          <li><a href="foias/champaign_police_department/1/Sole-Source-Justification.pdf" target="_blank">Sole-Source-Justification.pdf</a></li>
-          <li><a href="foias/champaign_police_department/1/lamberson_email.pdf" target="_blank">lamberson_email.pdf</a></li>
-
         </ul>
 
-        <h3>Parkland</h3>
-        <ul>
-          <li><a href="foias/parkland/agreement_1.pdf" target="_blank">agreement_1.pdf</a></li>
-          <li><a href="foias/parkland/agreement_2.pdf" target="_blank">agreement_2.pdf</a></li>
-          <li><a href="foias/parkland/contract.pdf" target="_blank">contract.pdf</a></li>
-          <li><a href="foias/parkland/guide.pdf" target="_blank">guide.pdf</a></li>
-          <li><a href="foias/parkland/response.pdf" target="_blank">response.pdf</a></li>
-        </ul>
+        <h3 id="cpd">Champaign Police Department</h3>
+          <ul>
+            <li><strong>Annual Reports</strong>
+              <ul>
+                <li>
+                  <a href="foias/champaign_police_department/1/annual_reports/2022-07-22_annual_report.docx" target="_blank">2022-07-22_annual_report.docx</a>
+                  <span class="leader"></span>
+                  <span>Has 2022 ALPR locations</span>
+                </li>
+                <li>
+                  <a href="foias/champaign_police_department/1/annual_reports/2023-07-20_annual_report.docx" target="_blank">2023-07-20_annual_report.docx</a>
+                  <span class="leader"></span>
+                  <span>Has 2022 ALPR locations</span>
+                </li>
+                <li>
+                  <a href="foias/champaign_police_department/1/annual_reports/2023-07-20_annual_report.pdf" target="_blank">2023-07-20_annual_report.pdf</a>
+                  <span class="leader"></span>
+                  <span>.</span>
+                </li>
+                <li>
+                  <a href="foias/champaign_police_department/1/annual_reports/2024-12-31_annual_report.docx" target="_blank">2024-12-31_annual_report.docx</a>
+                  <span class="leader"></span>
+                  <span>Has 2022 ALPR locations</span>
+                </li>
+                <li>
+                  <a href="foias/champaign_police_department/1/annual_reports/2025-10-13_annual_report.docx" target="_blank">2025-10-13_annual_report.docx</a>
+                  <span class="leader"></span>
+                  <span>Has 2024 relocations (also see <a href="https://documents.ci.champaign.il.us/object?id=19AMXUqJK8NDDIkV9TBwkZaGn-78YXqsI">2023-209</a>)</span>
+                </li>
+              </ul>
 
-        <h3>UIUC</h3>
-        <ul>
-          <li><a href="foias/uiuc/2/2026-03-27_correspondence.pdf" target="_blank">2026-03-27_correspondence.pdf</a></li>
-          <li><a href="foias/uiuc/26-967-letter-response.pdf" target="_blank">26-967-letter-response.pdf</a></li>
-          <li><a href="foias/uiuc/26-968-letter-response.pdf" target="_blank">26-968-letter-response.pdf</a></li>
-          <li><a href="foias/uiuc/26-1140-letter-response.pdf" target="_blank">26-1140-letter-response.pdf</a></li>
-          <li><a href="foias/uiuc/26-1140-uiuc-networks-im-sharing.csv" target="_blank">26-1140-uiuc-networks-im-sharing.csv</a></li>
-          <li><a href="foias/uiuc/amendment_1.pdf" target="_blank">amendment_1.pdf</a></li>
-          <li><a href="foias/uiuc/amendment_2.pdf" target="_blank">amendment_2.pdf</a></li>
-          <li><a href="foias/uiuc/amendment_3.pdf" target="_blank">amendment_3.pdf</a></li>
-          <li><a href="foias/uiuc/amendment_4.pdf" target="_blank">amendment_4.pdf</a></li>
-          <li><a href="foias/uiuc/uipd-flock-response-1.docx" target="_blank">uipd-flock-response-1.docx</a></li>
-        </ul>
+              <ul class="notes-list">
+                <li>"On May 4, 2022, the Department's ALPR program was implemented. At that time, nine ALPRs were installed and operational." — 2022-07-22 Annual Report</li>
+                <li>May 8, 2022 was the first success story according to the 2022-07-22 Annual Report.</li>
+                <li>3,246,246 reads per month on 28 ALPRs according to the 2022-07-22 Annual Report.</li>
+                <li>"Department administrators also provided clarifying instruction, which advised staff that ALPRs could be used for criminal offenses for which they would make a custodial arrest." — 2022-07-22 Annual Report</li>
+                <li>"The term of the agreement with Flock was for two years, which did not commence until the last ALPR was installed on January 24, 2023."</li>
+                <li>The 2024-12-31 does not mention the deployment of any new ALPRs, approved on Dec 2023</li>
+                <li>"As of June 2025, the ALPR infrastructure includes: 62 fixed Falcon ALPRs (including the original 46 deployed in 2023)"</li>
+                <li>
+                  "CPD began auditing all ALPR search activity conducted on the network to ensure compliance." —2025-10-13 Annual Report
+                  <ul>
+                    <li>So they're actually auditing the network searches? I would like to see those audits.</li>
+                  </ul>
+                </li>
+                <li>There must be a lag to the information these reports. Consider: "Estimated deployment at 18 intersections by Summer 2025" — 2025-10-13 Annual Report</li>
+              </ul>
 
-        <h3>Misc</h3>
-        <ul>
-          <li><a href="foias/matteson-internal-investigation.pdf" target="_blank">matteson-internal-investigation.pdf</a></li>
-        </ul>
+            <li><strong>Correspondence</strong>
+              <ul>
+                <li>
+                  <a href="foias/champaign_police_department/1/correspondence/2026-03-13_foia_correspondence.pdf" target="_blank">2026-03-13_foia_correspondence.pdf</a>
+                  <span class="leader"></span>
+                  <span>Initial request</span>
+                </li>
+                <li>
+                  <a href="foias/champaign_police_department/1/correspondence/2026-03-22_foia_correspondence.pdf" target="_blank">2026-03-22_foia_correspondence.pdf</a>
+                  <span class="leader"></span>
+                  <span>Legal deadline passed; following up</span>
+                </li>
+                <li>
+                  <a href="foias/champaign_police_department/1/correspondence/2026-03-23_1_foia_correspondence.pdf" target="_blank">2026-03-23_1_foia_correspondence.pdf</a>
+                  <span class="leader"></span>
+                  <span>Sorry! Should have sent you extension letter</span>
+                </li>
+                <li>
+                  <a href="foias/champaign_police_department/1/correspondence/2026-03-23_2_foia_correspondence.pdf" target="_blank">2026-03-23_2_foia_correspondence.pdf</a>
+                  <span class="leader"></span>
+                  <span>Extension letter</span>
+                </li>
+                <li>
+                  <a href="foias/champaign_police_department/1/correspondence/2026-03-25_1_foia_correspondence.pdf" target="_blank">2026-03-25_1_foia_correspondence.pdf</a>
+                  <span class="leader"></span>
+                  <span>Some requests completed, some denied (exemption claimed), some "no records returned"</span>
+                </li>
+                <li>
+                  <a href="foias/champaign_police_department/1/correspondence/2026-03-25_2_foia_correspondence.pdf" target="_blank">2026-03-25_2_foia_correspondence.pdf</a>
+                  <span class="leader"></span>
+                  <span>Can you clarify denials and other stuff?</span>
+                </li>
+                <li>
+                  <a href="foias/champaign_police_department/1/correspondence/2026-03-25_3_foia_correspondence.pdf" target="_blank">2026-03-25_3_foia_correspondence.pdf</a>
+                  <span class="leader"></span>
+                  <span>	Here's a previous statement by the Police about the audits I wanted to request</span>
+                </li>
+              </ul>
+            </li>
+
+            <li><strong>CRS Reports</strong>
+              <ul>
+                <li>
+                  <a href="foias/champaign_police_department/1/crs_reports/2024-07_to_2024-12_crs_report.docx" target="_blank">2024-07_to_2024-12_crs_report.docx</a>
+                  <span class="leader"></span>
+                  <span>.</span>
+                </li>
+                <li>
+                  <a href="foias/champaign_police_department/1/crs_reports/2025-01_to_2025-06_crs_report.docx" target="_blank">2025-01_to_2025-06_crs_report.docx</a>
+                  <span class="leader"></span>
+                  <span>.</span>
+                </li>
+                <li>
+                  <a href="foias/champaign_police_department/1/crs_reports/2025-07_to_2025-12_crs_report.pdf" target="_blank">2025-07_to_2025-12_crs_report.pdf</a>
+                  <span class="leader"></span>
+                  <span>.</span>
+                </li>
+              </ul>
+            </li>
+
+            <li><strong>Invoices</strong>
+              <ul>
+                <li>
+                  <a href="foias/champaign_police_department/1/invoices/2022-10-05_invoice.pdf" target="_blank">2022-10-05_invoice.pdf</a>
+                  <span class="leader"></span>
+                  <span>$125,500	46 new Falcons</span>
+                </li>
+                <li>
+                  <a href="foias/champaign_police_department/1/invoices/2023-07-20_invoice.pdf" target="_blank">2023-07-20_invoice.pdf</a>
+                  <span class="leader"></span>
+                  <span>$125,500	Whoops, we changed bank accts (46 new Flock Falcons)</span>
+                </li>
+                <li>
+                  <a href="foias/champaign_police_department/1/invoices/2023-08-24_invoice.pdf" target="_blank">2023-08-24_invoice.pdf</a>
+                  <span class="leader"></span>
+                  <span>$1,300	1 replacement pole and camera (Falcon?)</span>
+                </li>
+                <li>
+                  <a href="foias/champaign_police_department/1/invoices/2024-02-24_invoice.pdf" target="_blank">2024-02-24_invoice.pdf</a>
+                  <span class="leader"></span>
+                  <span>$242,200	46 old + 16 new Falcons, 4 new Falcon Flex, 36 new Flock Wing integrations</span>
+                </li>
+                <li>
+                  <a href="foias/champaign_police_department/1/invoices/2024-08-05_invoice.pdf" target="_blank">2024-08-05_invoice.pdf</a>
+                  <span class="leader"></span>
+                  <span>$800	1 replacement Falcon Flex</span>
+                </li>
+                <li>
+                  <a href="foias/champaign_police_department/1/invoices/2024-10-10_invoice.pdf" target="_blank">2024-10-10_invoice.pdf</a>
+                  <span class="leader"></span>
+                  <span>$1,300	1 replacement pole and camera (Falcon?)</span>
+                </li>
+                <li>
+                  <a href="foias/champaign_police_department/1/invoices/2024-10-30_invoice.pdf" target="_blank">2024-10-30_invoice.pdf</a>
+                  <span class="leader"></span>
+                  <span>$11,000	7 new Flock Wing integrations</span>
+                </li>
+                <li>
+                  <a href="foias/champaign_police_department/1/invoices/2025-01-28_invoice.pdf" target="_blank">2025-01-28_invoice.pdf</a>
+                  <span class="leader"></span>
+                  <span>$228,000	62 old Falcons, 4 old Falcon Flex, 36 old Flock Wing</span>
+                </li>
+                <li>
+                  <a href="foias/champaign_police_department/1/invoices/2025-04-11_invoice.pdf" target="_blank">2025-04-11_invoice.pdf</a>
+                  <span class="leader"></span>
+                  <span>.</span>
+                </li>
+                <li>
+                  <a href="foias/champaign_police_department/1/invoices/2025-10-27_invoice.pdf" target="_blank">2025-10-27_invoice.pdf</a>
+                  <span class="leader"></span>
+                  <span>$10,500	7 old Flock Wing integrations</span>
+                </li>
+                <li>
+                  <a href="foias/champaign_police_department/1/invoices/2026-01-26_invoice.pdf" target="_blank">2026-01-26_invoice.pdf</a>
+                  <span class="leader"></span>
+                  <span>$228,000	62 old Falcons, 4 old Falcon Flex, 36 old Flock Wing integrations</span>
+                </li>
+              </ul>
+            </li>
+
+            <li><strong>Org Audit</strong>
+              <ul>
+                <li>
+                  <a href="foias/champaign_police_department/1/org_audit/Champaign IL PD_Organization_Audit_2025-01-01_2025-02-01.csv" target="_blank">Champaign IL PD_Organization_Audit_2025-01-01_2025-02-01.csv</a>
+                  <span class="leader"></span>
+                  <span>.</span>
+                </li>
+                <li>
+                  <a href="foias/champaign_police_department/1/org_audit/Champaign IL PD_Organization_Audit_2025-02-01_2025-03-01.csv" target="_blank">Champaign IL PD_Organization_Audit_2025-02-01_2025-03-01.csv</a>
+                  <span class="leader"></span>
+                  <span>.</span>
+                </li>
+                <li>
+                  <a href="foias/champaign_police_department/1/org_audit/Champaign IL PD_Organization_Audit_2025-03-01_2025-04-01.csv" target="_blank">Champaign IL PD_Organization_Audit_2025-03-01_2025-04-01.csv</a>
+                  <span class="leader"></span>
+                  <span>.</span>
+                </li>
+                <li>
+                  <a href="foias/champaign_police_department/1/org_audit/Champaign IL PD_Organization_Audit_2025-04-01_2025-05-01.csv" target="_blank">Champaign IL PD_Organization_Audit_2025-04-01_2025-05-01.csv</a>
+                  <span class="leader"></span>
+                  <span>.</span>
+                </li>
+                <li>
+                  <a href="foias/champaign_police_department/1/org_audit/Champaign IL PD_Organization_Audit_2025-05-01_2025-06-01.csv" target="_blank">Champaign IL PD_Organization_Audit_2025-05-01_2025-06-01.csv</a>
+                  <span class="leader"></span>
+                  <span>.</span>
+                </li>
+                <li>
+                  <a href="foias/champaign_police_department/1/org_audit/Champaign IL PD_Organization_Audit_2025-06-01_2025-07-01.xlsx" target="_blank">Champaign IL PD_Organization_Audit_2025-06-01_2025-07-01.xlsx</a>
+                  <span class="leader"></span>
+                  <span>.</span>
+                </li>
+                <li>
+                  <a href="foias/champaign_police_department/1/org_audit/Champaign IL PD_Organization_Audit_2025-07-01_2025-08-01.xlsx" target="_blank">Champaign IL PD_Organization_Audit_2025-07-01_2025-08-01.xlsx</a>
+                  <span class="leader"></span>
+                  <span>.</span>
+                </li>
+                <li>
+                  <a href="foias/champaign_police_department/1/org_audit/Champaign IL PD_Organization_Audit_2025-08-01_09-01.csv" target="_blank">Champaign IL PD_Organization_Audit_2025-08-01_09-01.csv</a>
+                  <span class="leader"></span>
+                  <span>.</span>
+                </li>
+                <li>
+                  <a href="foias/champaign_police_department/1/org_audit/Champaign IL PD_Organization_Audit_2025-08-01_2025-08-31.csv" target="_blank">Champaign IL PD_Organization_Audit_2025-08-01_2025-08-31.csv</a>
+                  <span class="leader"></span>
+                  <span>.</span>
+                </li>
+                <li>
+                  <a href="foias/champaign_police_department/1/org_audit/Champaign IL PD_Organization_Audit_2025-10-01_2025-10-31.csv.xlsx" target="_blank">Champaign IL PD_Organization_Audit_2025-10-01_2025-10-31.csv.xlsx</a>
+                  <span class="leader"></span>
+                  <span>.</span>
+                </li>
+                <li>
+                  <a href="foias/champaign_police_department/1/org_audit/Champaign IL PD_Organization_Audit_2025-11-01_2025-11-30.csv.xlsx" target="_blank">Champaign IL PD_Organization_Audit_2025-11-01_2025-11-30.csv.xlsx</a>
+                  <span class="leader"></span>
+                  <span>.</span>
+                </li>
+                <li>
+                  <a href="foias/champaign_police_department/1/org_audit/Champaign IL PD_Organization_Audit_2025-12-01_2025-12-31.csv.xlsx" target="_blank">Champaign IL PD_Organization_Audit_2025-12-01_2025-12-31.csv.xlsx</a>
+                  <span class="leader"></span>
+                  <span>.</span>
+                </li>
+                <li>
+                  <a href="foias/champaign_police_department/1/org_audit/Champaign IL PD_Organization_Audit_2026-01-01_2026-01-31.csv.xlsx" target="_blank">Champaign IL PD_Organization_Audit_2026-01-01_2026-01-31.csv.xlsx</a>
+                  <span class="leader"></span>
+                  <span>.</span>
+                </li>
+                <li>
+                  <a href="foias/champaign_police_department/1/org_audit/Champaign IL PD_Organization_Audit_2026-02-01_2025-02-28.csv" target="_blank">Champaign IL PD_Organization_Audit_2026-02-01_2025-02-28.csv</a>
+                  <span class="leader"></span>
+                  <span>.</span>
+                </li>
+              </ul>
+            </li>
+
+            <li><strong>Other</strong>
+              <ul>
+                <li>
+                  <a href="foias/champaign_police_department/1/2022-03-15_contract.pdf" target="_blank">2022-03-15_contract.pdf</a>
+                  <span class="leader"></span>
+                  <span>2-year contract</span>
+                </li>
+                <li>
+                  <a href="foias/champaign_police_department/1/2023-12-27_contract.pdf" target="_blank">2023-12-27_contract.pdf</a>
+                  <span class="leader"></span>
+                  <span>5-year contract</span>
+                </li>
+                <li>
+                  <a href="foias/champaign_police_department/1/2024-apr.csv" target="_blank">2024-apr.csv</a>
+                  <span class="leader"></span>
+                  <span>.</span>
+                </li>
+                <li>
+                  <a href="foias/champaign_police_department/1/2026_may_audit.pdf" target="_blank">2026_may_audit.pdf</a>
+                  <span class="leader"></span>
+                  <span>.</span>
+                </li>
+                <li>
+                  <a href="foias/champaign_police_department/1/Sole-Source-Justification.pdf" target="_blank">Sole-Source-Justification.pdf</a>
+                  <span class="leader"></span>
+                  <span>.</span>
+                </li>
+                <li>
+                  <a href="foias/champaign_police_department/1/lamberson_email.pdf" target="_blank">lamberson_email.pdf</a>
+                  <span class="leader"></span>
+                  <span>.</span>
+                </li>
+              </ul>
+            </li>
+          </ul>
+
+        <h3 id="parkland">Parkland College</h3>
+          <ul>
+            <li><strong>Agreements</strong>
+              <ul>
+                <li>
+                  <a href="foias/parkland/agreement_1.pdf" target="_blank">agreement_1.pdf</a>
+                  <span class="leader"></span>
+                  <span>.</span>
+                </li>
+                <li>
+                  <a href="foias/parkland/agreement_2.pdf" target="_blank">agreement_2.pdf</a>
+                  <span class="leader"></span>
+                  <span>.</span>
+                </li>
+              </ul>
+
+            <li><strong>Other</strong>
+              <ul>
+                <li>
+                  <a href="foias/parkland/contract.pdf" target="_blank">contract.pdf</a>
+                  <span class="leader"></span>
+                  <span>.</span>
+                </li>
+                <li>
+                  <a href="foias/parkland/guide.pdf" target="_blank">guide.pdf</a>
+                  <span class="leader"></span>
+                  <span>.</span>
+                </li>
+                <li>
+                  <a href="foias/parkland/response.pdf" target="_blank">response.pdf</a>
+                  <span class="leader"></span>
+                  <span>.</span>
+                </li>
+              </ul>
+          </ul>
+
+          <h3 id="uiuc">UIUC</h3>
+          <ul>
+            <li><strong>Amendments</strong>
+              <ul>
+                <li>
+                  <a href="foias/uiuc/amendment_1.pdf" target="_blank">amendment_1.pdf</a>
+                  <span class="leader"></span>
+                  <span>.</span>
+                </li>
+                <li>
+                  <a href="foias/uiuc/amendment_2.pdf" target="_blank">amendment_2.pdf</a>
+                  <span class="leader"></span>
+                  <span>.</span>
+                </li>
+                <li>
+                  <a href="foias/uiuc/amendment_3.pdf" target="_blank">amendment_3.pdf</a>
+                  <span class="leader"></span>
+                  <span>.</span>
+                </li>
+                <li>
+                  <a href="foias/uiuc/amendment_4.pdf" target="_blank">amendment_4.pdf</a>
+                  <span class="leader"></span>
+                  <span>.</span>
+                </li>
+              </ul>
+
+            <li><strong>Other</strong>
+              <ul>
+                <li>
+                  <a href="foias/uiuc/2/2026-03-27_correspondence.pdf" target="_blank">2026-03-27_correspondence.pdf</a>
+                  <span class="leader"></span>
+                  <span>.</span>
+                </li>
+                <li>
+                  <a href="foias/uiuc/26-967-letter-response.pdf" target="_blank">26-967-letter-response.pdf</a>
+                  <span class="leader"></span>
+                  <span>.</span>
+                </li>
+                <li>
+                  <a href="foias/uiuc/26-968-letter-response.pdf" target="_blank">26-968-letter-response.pdf</a>
+                  <span class="leader"></span>
+                  <span>.</span>
+                </li>
+                <li>
+                  <a href="foias/uiuc/26-1140-letter-response.pdf" target="_blank">26-1140-letter-response.pdf</a>
+                  <span class="leader"></span>
+                  <span>.</span>
+                </li>
+                <li>
+                  <a href="foias/uiuc/26-1140-uiuc-networks-im-sharing.csv" target="_blank">26-1140-uiuc-networks-im-sharing.csv</a>
+                  <span class="leader"></span>
+                  <span>.</span>
+                </li>
+                <li>
+                  <a href="foias/uiuc/uipd-flock-response-1.docx" target="_blank">uipd-flock-response-1.docx</a>
+                  <span class="leader"></span>
+                  <span>.</span>
+                </li>
+              </ul>
+          </ul>
+
+          <h3 id="misc">Misc</h3>
+          <ul>
+            <li>
+              <a href="foias/matteson-internal-investigation.pdf" target="_blank">matteson-internal-investigation.pdf</a>
+              <!-- <span class="leader"></span>
+              <span>.</span> -->
+            </li>
+          </ul>
       </div>
 
 
